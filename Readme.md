@@ -67,7 +67,7 @@ Welcome to **Tic-Tac-Toe: Chalkboard Edition**! A fun, interactive, and visually
 ## 🌐 Deployed Version
 
 You can play the game online here:
-**[Tic-Tac-Toe: Chalkboard Edition Live](https://your-deployment-link.com)** 🎮✨
+**[Tic-Tac-Toe: Chalkboard Edition Live](https://tic-tac-toe-game-kr.netlify.app/)** 🎮✨
 
 ---
 
@@ -88,3 +88,4 @@ You can play the game online here:
 ---
 
 Enjoy playing and may the best player win! 🏆✨
+
