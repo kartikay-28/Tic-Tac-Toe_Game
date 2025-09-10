@@ -1,0 +1,207 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2b4d2b, #3b6d3b); /* chalkboard green */
+  color: #fff;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.8rem;
+  color: #fdf5b3; /* soft yellow chalk color */
+  text-shadow: 1px 1px 2px #4a4a4a;
+}
+
+/* Scoreboard */
+.scoreboard {
+  margin-bottom: 20px;
+  background: #3b5f3b; /* darker green */
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  font-weight: bold;
+  color: #fdf5b3;
+  text-align: center;
+  min-width: 350px;
+  font-size: 1.1rem;
+}
+
+/* Game Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 12px;
+  background: #355e35; /* darker green board */
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Cells */
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #f5e1a4; /* light yellow / brown chalk cell */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  color: #b26a00; /* default O color */
+}
+
+.cell:hover {
+  transform: scale(1.08);
+  background: #f7e39b; /* brighter hover */
+}
+
+/* Taken cells */
+.cell.taken {
+  pointer-events: none;
+}
+
+/* X / O colors */
+.cell.x {
+  color: #fdf5b3; /* yellow chalk X */
+  text-shadow: 0 0 5px #fff176;
+}
+
+.cell.o {
+  color: #b26a00; /* brown chalk O */
+  text-shadow: 0 0 5px #ffcc80;
+}
+
+/* Status Message */
+.status {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fdf5b3;
+  text-shadow: 0 0 3px #4a4a4a;
+}
+
+/* Reset Button */
+.reset-btn {
+  margin-top: 15px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #b26a00; /* brown */
+  color: #fffde7; /* light yellow text */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reset-btn:hover {
+  background: #ffcc80;
+  color: #3b3b3b;
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #2f4f2f; /* deep green */
+  padding: 25px 35px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  width: 350px;
+  color: #fdf5b3;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Modal Heading */
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #fffde7;
+}
+
+/* Modal Inputs */
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #b26a00; /* brown border */
+  border-radius: 8px;
+  background: #f5e1a4; /* light yellow / brown to match cells */
+  color: #3b2f1b; /* dark text for readability */
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+/* Modal Buttons */
+.modal-buttons button {
+  padding: 10px 25px;
+  margin-top: 10px;
+  background: #b26a00;
+  border: none;
+  color: #fffde7;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-buttons button:hover {
+  background: #ffcc80;
+  color: #3b3b3b;
+}
+
+/* Dropdown / Select for Game Mode */
+select#modeSelect {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #b26a00; /* brown border */
+  border-radius: 8px;
+  background: #f5e1a4; /* light yellow / brown */
+  color: #3b2f1b; /* dark text */
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Dropdown hover/focus */
+select#modeSelect:hover,
+select#modeSelect:focus {
+  background: #ffecb3; /* brighter yellow on hover/focus */
+  outline: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

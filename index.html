@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Tic Tac Toe</h1>
+
+  <!-- Scoreboard -->
+  <div class="scoreboard">
+    <span id="score1">Player 1: 0</span> | 
+    <span id="score2">Player 2: 0</span> | 
+    <span id="drawScore">Draws: 0</span>
+  </div>
+
+  <!-- Round Display -->
+  <div id="roundCounter" class="round-counter">Round: 1 / 3</div>
+
+  <!-- Game Board -->
+  <div class="board" id="board"></div>
+
+  <!-- Status Message -->
+  <div class="status" id="status">Loading...</div>
+
+  <!-- Reset Button -->
+  <button class="reset-btn" id="resetBtn">Restart Game</button>
+
+  <!-- Modal for player names, rounds, and mode -->
+  <div class="modal" id="nameModal">
+    <div class="modal-content">
+      <h2>Start New Game</h2>
+      <input type="text" id="player1Name" placeholder="Player 1 (X)">
+      <input type="text" id="player2Name" placeholder="Player 2 (O)">
+      
+      <label for="totalRounds">Best of rounds:</label>
+      <input type="number" id="totalRounds" min="1" max="15" value="3">
+
+      <label for="modeSelect">Game Mode:</label>
+      <select id="modeSelect">
+        <option value="PvP">Player vs Player</option>
+        <option value="PvC">Player vs Computer</option>
+      </select>
+
+      <div class="modal-buttons">
+        <button id="startGameBtn">Start Game</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
